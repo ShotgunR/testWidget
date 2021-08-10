@@ -66,7 +66,7 @@
     </div>
     <!-- Tab content -->
     <div name="quote_btn" id="quote" class="tab_content">
-        <iframe name="" width='100%' style="height: 100vh;" frameborder='0' allowTransparency='true' scrolling='auto' src="https://creatorapp.zoho.com/ioosthuizen/zhero/view-embed/client_quote_pdf?quotationID=1254445000026886177"></iframe>
+        <iframe name="clientQuote" width='100%' style="height: 100vh;" frameborder='0' allowTransparency='true' scrolling='auto'></iframe>
     </div>
     <div name="info_btn" id="info" class="tab_content">
 
@@ -84,10 +84,9 @@
                 var queryParams = ZOHO.CREATOR.UTIL.getQueryParams();
                 let site = "https://creatorapp.zoho.com/ioosthuizen/zhero/form-embed/Client_quote?zc_Header=false&Quotations=" + queryParams["quotationID"]
                 document.getElementsByName('clientQuoteFrame')[0].src = site;
+                site = "https://creatorapp.zoho.com/ioosthuizen/zhero/view-embed/client_quote_pdf?quotationID=" + queryParams["quotationID"]
+                document.getElementsByName('clientQuote')[0].src = site;
             })
-
-
-
     }
 
     function openTab(evt, contentID) {
