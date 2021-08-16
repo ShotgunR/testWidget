@@ -67,30 +67,27 @@
     </div>
     <!-- Tab content -->
     <div name="quote_btn" id="quote" class="tab_content">
-        <h1>Test1</h1>
         <iframe name="clientQuote" width='100%' style="height: 100vh;" frameborder='0' allowTransparency='true' scrolling='auto'></iframe>
     </div>
     <div name="info_btn" id="info" class="tab_content">
-        <h1>Test2</h1>
     </div>
     <div name="client_info_btn" id="client_info" class="tab_content">
-        <h1>Test3</h1>
         <iframe name="clientQuoteFrame" width='100%' style="height: 100vh;" frameborder='0' allowTransparency='true' scrolling='auto'></iframe>
     </div>
 
 </body>
 <script>
-    // window.onload = function() {
-    //     console.log(document);
-    //     ZOHO.CREATOR.init()
-    //         .then(function(data) {
-    //             var queryParams = ZOHO.CREATOR.UTIL.getQueryParams();
-    //             let site = "https://creatorapp.zoho.com/ioosthuizen/zhero/form-embed/Client_quote?zc_Header=false&Quotations=" + queryParams["quotationID"]
-    //             document.getElementsByName('clientQuoteFrame')[0].src = site;
-    //             site = "https://creatorapp.zoho.com/ioosthuizen/zhero/view-embed/client_quote_pdf?quotationID=" + queryParams["quotationID"]
-    //             document.getElementsByName('clientQuote')[0].src = site;
-    //         })
-    // }
+    window.onload = function() {
+        console.log(document);
+        ZOHO.CREATOR.init()
+            .then(function(data) {
+                var queryParams = ZOHO.CREATOR.UTIL.getQueryParams();
+                let site = "https://creatorapp.zoho.com/ioosthuizen/zhero/form-embed/Client_quote?zc_Header=false&Quotations=" + queryParams["quotationID"]
+                document.getElementsByName('clientQuoteFrame')[0].src = site;
+                site = "https://creatorapp.zoho.com/ioosthuizen/zhero/view-embed/client_quote_pdf?quotationID=" + queryParams["quotationID"]
+                document.getElementsByName('clientQuote')[0].src = site;
+            })
+    }
 
     function openTab(evt, contentID) {
         console.log(contentID);
