@@ -39,6 +39,7 @@
     /* Style the tab content */
     
     .tab_content {
+        height: 100%;
         display: block;
         animation: fadeEffect .6s;
         /* Fading effect takes 1 second */
@@ -62,15 +63,16 @@
         <button id="client_info_btn" class="tablinks">Client Information</button>
     </div>
     <!-- Tab content -->
-    <div name="quote_btn" id="quote" class="tab_content">
-        <iframe name="clientQuote" width='100%' style="height: 100%;" frameborder='0' allowTransparency='true' scrolling='auto'></iframe>
+    <div>
+        <div name="quote_btn" id="quote" class="tab_content">
+            <iframe name="clientQuote" width='100%' height="100%" frameborder='0' allowTransparency='true' scrolling='auto'></iframe>
+        </div>
+        <div name="info_btn" id="info" class="tab_content">
+        </div>
+        <div name="client_info_btn" id="client_info" class="tab_content">
+            <iframe name="clientQuoteFrame" width='100%' height="100%" frameborder='0' allowTransparency='true' scrolling='auto'></iframe>
+        </div>
     </div>
-    <div name="info_btn" id="info" class="tab_content">
-    </div>
-    <div name="client_info_btn" id="client_info" class="tab_content">
-        <iframe name="clientQuoteFrame" width='100%' style="height: 100%;" frameborder='0' allowTransparency='true' scrolling='auto'></iframe>
-    </div>
-
 </body>
 <script>
     window.onload = function() {
