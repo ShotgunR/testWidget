@@ -77,9 +77,9 @@
         ZOHO.CREATOR.init()
             .then(function(data) {
                 var queryParams = ZOHO.CREATOR.UTIL.getQueryParams();
-                let site = "https://creatorapp.zohopublic.com/ioosthuizen/zhero/form-perma/Client_quote/XhW5qOknYSgpd5OHahgAOeujFEZ6kuYx1Pvgv9snCANUvu9a0TQXRVYHdxDHx08ypDvYtXzmCSx398BCRS6MW7UJEy1MmuH5rCdu?zc_Header=false&Quotations=" + queryParams["quotationID"]
+                let site = "https://creatorapp.zohopublic.com/ioosthuizen/zhero/form-embed/Client_quote/XhW5qOknYSgpd5OHahgAOeujFEZ6kuYx1Pvgv9snCANUvu9a0TQXRVYHdxDHx08ypDvYtXzmCSx398BCRS6MW7UJEy1MmuH5rCdu?zc_Header=false&Quotations=" + queryParams["quotationID"]
                 document.getElementsByName('clientQuoteFrame')[0].src = site;
-                site = "https://creatorapp.zohopublic.com/ioosthuizen/zhero/page-perma/client_quote_pdf/pkEsRShUaWn9urqremkEvfv6BVOW81z0x20zqWbQ6hKkG1VaVU4q0Ty0OdqmhxFXWHuVYSKxkfRYta8Sw1KGJVhexgupt3A3URxQ?quotationID=" + queryParams["quotationID"]
+                site = "https://creatorapp.zohopublic.com/ioosthuizen/zhero/page-embed/client_quote_pdf/pkEsRShUaWn9urqremkEvfv6BVOW81z0x20zqWbQ6hKkG1VaVU4q0Ty0OdqmhxFXWHuVYSKxkfRYta8Sw1KGJVhexgupt3A3URxQ?quotationID=" + queryParams["quotationID"]
                 document.getElementsByName('clientQuote')[0].src = site;
             })
     }
