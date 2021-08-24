@@ -1,6 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <script src=" https://js.zohostatic.com/creator/widgets/version/1.0/widgetsdk-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <style>
     body {
@@ -71,7 +72,7 @@
         <div name="info_btn" id="info" class="tab_content">
         </div>
         <div name="client_info_btn" id="client_info" class="tab_content">
-            <iframe name="clientQuoteFrame" width='100vw' height="100%" frameborder='0' allowTransparency='true' scrolling='auto'></iframe>
+            <iframe id="iframe-id" name="clientQuoteFrame" width='100%' height="100%" frameborder='0' allowTransparency='true' scrolling='auto'></iframe>
         </div>
     </div>
 </body>
@@ -87,6 +88,12 @@
                 document.getElementsByName('clientQuote')[0].src = site;
             })
     }
+
+    // $('#iframe-id').on('load', function() {
+    //     // code will run after iframe has finished loading
+    //     document.getElementById("quote_btn").click();
+    //     console.log("test");
+    // });
 
     function openTab(evt, contentID) {
         console.log(contentID);
